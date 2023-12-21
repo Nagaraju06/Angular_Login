@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+a{
+    text-decoration: none;
+}
+
+.form-control:focus {
+    color: #333333 !important;
+    background-color: #FFF !important;
+    border-color: #858585 !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+.loginMainCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: calc(100vh - 75%);
+}
+
+.loginCard{
+    background: linear-gradient(90deg, rgba(142,218,238,1) 0%, rgba(187,163,233,1) 50%, rgba(237,163,218,1) 100%);
+    padding: 20px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.signUpMainCard{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(100vh - 75%);
+    margin: 0 25rem;
+}
+
+.signupCard{
+    background: linear-gradient(90deg, rgba(186,242,172,1) 0%, rgba(229,192,249,1) 50%, rgba(249,245,171,1) 100%);
+    padding: 20px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.asteric{
+    color: #CA0000;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.header-logo{
+    height: 30px;
+    width: max-content;
+    cursor: pointer;
+}

@@ -1,0 +1,105 @@
+<div class="signUpMainCard">
+    <div class="signupCard">
+        <div class="text-center">
+            <h4>Welcome to Sign Up Page</h4>
+            <p>Please fill the below details to complete your regestration.</p>
+        </div>
+        <form action="" [formGroup]="form" (submit)="onSubmit()" autocomplete="off">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="firstname">First Name&nbsp;<span class="asteric">*</span></label>
+                        <input type="text" formControlName="firstname"  class="form-control" name="firstname" placeholder="Enter Firstname" />
+                        <!-- @if(!user.firstname){
+                            <p class="text-danger">Please enter firstname</p>
+                        } -->
+                        <div *ngIf="f['firstname'].touched && f['firstname'].invalid" class="asteric">
+                            <div *ngIf="f['firstname'].errors && f['firstname'].errors['required']">Firstname is required.</div>
+                            <div *ngIf="f['firstname'].errors && f['firstname'].errors['minlength']">Firstname should be 3 character.</div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="lastname">Last Name&nbsp;<span class="asteric">*</span></label>
+                        <input type="text" formControlName="lastname"  class="form-control" name="lastname" placeholder="Enter Lastname" />
+                        <!-- @if(!user.lastname){
+                            <p class="text-danger">Please enter lastname</p>
+                        } -->
+                        <div *ngIf="f['lastname'].touched && f['lastname'].invalid" class="asteric">
+                            <div *ngIf="f['lastname'].errors && f['lastname'].errors['required']">Lastname is required.</div>
+                            <div *ngIf="f['lastname'].errors && f['lastname'].errors['minlength']">Lastname should be 3 character.</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" [(ngModel)]="user.username" class="form-control" name="username" placeholder="user name" />
+                    </div>
+                </div> -->
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="email">Email&nbsp;<span class="asteric">*</span></label>
+                        <input type="text" formControlName="email"  class="form-control" name="email" placeholder="Enter Email" />
+                        <!-- @if(!user.email){
+                            <p class="text-danger">Please enter email</p>
+                        } -->
+                        <div *ngIf="f['email'].touched && f['email'].invalid" class="asteric">
+                            <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                            <div *ngIf="f['email'].errors && f['email'].errors['minlength']">Email should be 3 character.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="number">Mobile Number&nbsp;<span class="asteric">*</span></label>
+                        <input type="text" formControlName="number"  class="form-control" name="number" placeholder="Enter Mobile Number" />
+                        <!-- @if(!user.number){
+                            <p class="text-danger">Please enter mobile nummber</p>
+                        } -->
+                        <div *ngIf="f['number'].touched && f['number'].invalid" class="asteric">
+                            <div *ngIf="f['number'].errors && f['number'].errors['required']">number is required.</div>
+                            <div *ngIf="f['number'].errors && f['number'].errors['minlength']">number should be 3 character.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="password">Password&nbsp;<span class="asteric">*</span></label>
+                        <input type="password" formControlName="password"  class="form-control" name="password" placeholder="Enter Password" />
+                        <!-- @if(!user.password){
+                            <p class="text-danger">Please enter password</p>
+                        } -->
+                        <div *ngIf="f['password'].touched && f['password'].invalid" class="asteric">
+                            <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                            <!-- <div *ngIf="f['password'].errors && f['password'].errors['minlength']">password should be 3 character.</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 mb-2">
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password&nbsp;<span class="asteric">*</span></label>
+                        <input type="password" formControlName="confirmPassword"  class="form-control" name="confirmPassword" placeholder="Enter Confirm Password" />
+                        <!-- @if(!user.confirmPassword){
+                            <p class="text-danger">Please enter confirm password</p>
+                        } -->
+                        <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="asteric">
+                            <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirm Password is required.</div>
+                            <!-- <div *ngIf="f['password'].errors && f['password'].errors['minlength']">password should be 3 character.</div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+        </form>
+        <!-- <div>
+            {{ form.value | json }}
+          </div> -->
+        <div>
+            <p>Already have an account&nbsp;<a routerLink="/login">SignIn</a></p>
+        </div>
+    </div>

@@ -1,0 +1,8 @@
+.sidebarCard{
+    background-color: antiquewhite;
+    width: calc(100vw - 90%);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /* overflow-y: scroll; */
+}

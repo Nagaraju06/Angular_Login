@@ -1,0 +1,9 @@
+.header-bg{
+    height: 50px;
+    background-color: whitesmoke;
+    border-radius: 0.15rem;
+    margin-left: calc(100vw - 89%);
+    padding: 0.615rem 1.15rem;
+    margin-top: 0.615rem;
+    margin-right: 1rem;
+}
