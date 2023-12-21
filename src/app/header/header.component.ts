@@ -24,13 +24,7 @@ export class HeaderComponent implements OnInit {
 
   
 
-  // getAvatarUrl(): string {
-  //   // Implement logic to generate the avatar URL based on user details
-  //   // For example, you might have a service that provides avatar URLs
-  //   // This is a placeholder; adjust it based on your actual implementation
-    
-  //   return `https://example.com/avatars/${this.currentUser.firstname}-${this.currentUser.lastname}.png`;
-  // }
+ 
 
   logout() {
     this.userAuthService.logout();
